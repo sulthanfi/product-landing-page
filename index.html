@@ -1,0 +1,79 @@
+<html lang="en">
+
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <style>
+            @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+                [class*="col-"] {
+                    width: 100%;
+                }
+            }
+            .flex-container{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header id="header">
+            <center>
+                <h1>Proliner Racing Exhaust</h1>
+                <img src="https://cf.shopee.ph/file/8567a28d10a1a190cab1e8d863b94368" id="header-img">
+                <nav id="nav-bar">
+                    <a class="nav-link" href="#learn-more">Learn More</a>
+                    <a class="nav-link" href="#request-coupon">Request Coupon</a>
+                    <a class="nav-link" href="#buy-on-tokopedia">Online stores</a>
+                </nav>
+            </center>
+        </header>
+
+        <section id="learn-more">
+            <center>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2UOeaLkNiqE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </center>
+        </section>
+        <section id="request-coupon">
+            <center>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input type="email" id="email" placeholder="uremail@blabla.com" name="email">
+                    <input id="submit" type="submit">
+                </form>
+            </center>
+        </section>
+        <section id="buy-on-tokopedia">
+            <div class="flex-container">
+                <div> <a href="tokped-link">Tokopedia</a> </div>
+                <div> <a href="shoppee-link">Shoppee</a> </div>
+                <div> <a href="bukalapak-link">Bukalapak</a> </div>
+            </div>
+        </section>
+
+        
+        
+    </body>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script>
+        console.log("Js Loaded")
+        window.onscroll = function(){
+            myFunction()
+        };
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function myFunction(){
+            if(window.pageYOffset > sticky){
+                header.classList.add("sticky");
+            }else{
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</html>
